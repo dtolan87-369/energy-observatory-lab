@@ -12,6 +12,7 @@ This is NOT manufacturing CAD and does not prove hinge clearance.
 """
 
 import FreeCAD as App
+import FreeCADGui as Gui
 import Part
 
 DOC_NAME = "IMPOSSIBLE_BOOK_P001_S0"
