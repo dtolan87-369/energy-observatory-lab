@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Energy Observatory Candidate",
+  "type": "object",
+  "required": ["name", "type", "status"],
+  "properties": {
+    "name": {"type": "string"},
+    "type": {"type": "string"},
+    "source": {"type": ["string", "null"]},
+    "license": {"type": ["string", "null"]},
+    "status": {
+      "enum": [
+        "FIND",
+        "LICENCE CHECK",
+        "USE NOW",
+        "ADAPT",
+        "GENERATED",
+        "CAD CHECKED",
+        "PRINTED / BUILT",
+        "TESTED",
+        "REPEATED",
+        "PRODUCT CANDIDATE",
+        "HOLD",
+        "LICENSE BLOCKED"
+      ]
+    },
+    "observatory_connection": {"type": ["string", "null"]},
+    "evidence": {"type": ["string", "null"]},
+    "commercial_potential": {"enum": ["Low", "Medium", "High", "Very High", null]},
+    "next_action": {"type": ["string", "null"]}
+  }
+}
