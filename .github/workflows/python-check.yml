@@ -1,0 +1,21 @@
+name: Python syntax check
+
+on:
+  push:
+    paths:
+      - "scripts/**/*.py"
+      - ".github/workflows/python-check.yml"
+  pull_request:
+    paths:
+      - "scripts/**/*.py"
+
+jobs:
+  pycompile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile scripts
+        run: python -m py_compile scripts/*.py
