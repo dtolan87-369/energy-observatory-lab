@@ -1,0 +1,38 @@
+# Secrets / local configuration
+.env
+.env.*
+*.pem
+*.key
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local AI / model data
+models/
+*.gguf
+*.safetensors
+
+# CAD / generated exports
+*.stl
+*.3mf
+*.step
+*.stp
+exports/
+renders/
+
+# Large/raw experiment data stays outside Git unless intentionally released
+raw_data/
+*.csv.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
